@@ -1,0 +1,34 @@
+@include media-md {
+  nav {
+    .nav-list {
+      position: relative;
+      flex-direction: row;
+      height: 0;
+
+      &-item {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  .menu-btn {
+    visibility: hidden;
+  }
+}
+
+@include media-lg {
+  .jobs-container {
+    grid-template-columns: repeat(2, 1fr);
+    justify-content: center;
+  }
+
+  .contact-section {
+    .contact-wrapper {
+      flex-direction: row;
+    }
+  }
+
+  .projects-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}

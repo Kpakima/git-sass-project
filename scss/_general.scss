@@ -1,0 +1,66 @@
+$primary-color: #272727;
+$secondary-color: #ff652f;
+$text-color: #fff;
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background: $primary-color;
+  color: $text-color;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  overflow-x: hidden;
+}
+
+a {
+  color: $text-color;
+  text-decoration: none;
+}
+
+.text-secondary {
+  color: $secondary-color;
+}
+
+footer {
+  position: fixed;
+  bottom: 1.2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1.6rem;
+}
+
+@mixin flexCenter($direction) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin transition-ease {
+  transition: all 0.5s ease-in;
+}
+
+@mixin media-md {
+  @media only screen and (min-width: 48rem) {
+    @content;
+  }
+}
+
+@mixin media-lg {
+  @media only screen and (min-width: 64rem) {
+    @content;
+  }
+}
+
+@mixin media-xl {
+  @media only screen and (min-width: 125rem) {
+    @content;
+  }
+}
